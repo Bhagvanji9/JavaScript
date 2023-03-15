@@ -39,27 +39,56 @@
 //   };
 
 // The following variables are defined in the global scope
-const num1 = 20;
-const num2 = 3;
-const name = "Chamakh";
+// const num1 = 20;
+// const num2 = 3;
+// const name = "Chamakh";
 
-// This function is defined in the global scope
-function multiply() {
-  return num1 * num2;
+// // This function is defined in the global scope
+// function multiply() {
+//   return num1 * num2;
+// }
+
+// console.log(multiply()); // Returns 60
+
+// // A nested function example
+// function getScore() {
+//   const num1 = 2;
+//   const num2 = 3;
+
+//   function add() {
+//     return `${name} scored ${num1 + num2}`;
+//   }
+
+//   return add();
+// }
+
+// console.log(getScore()); // Returns "Chamakh scored 5"
+
+// function Person() {
+//     this.age = 0;
+  
+//     setInterval(() => {
+//       this.age++; // `this` properly refers to the person object
+//     }, 1000);
+//   }
+  
+//   const p = new Person();
+//   console.log(p)
+
+function reference(a, obj1, obj2){
+  a = a*10;
+  obj1.item = "changed";
+  obj2 = {item:"changed"}
 }
 
-console.log(multiply()); // Returns 60
-
-// A nested function example
-function getScore() {
-  const num1 = 2;
-  const num2 = 3;
-
-  function add() {
-    return `${name} scored ${num1 + num2}`;
-  }
-
-  return add();
+var num = 10;
+var jay1 = {
+  item:"unchanged"
 }
 
-console.log(getScore()); // Returns "Chamakh scored 5"
+var jay2 = {
+  item:"unchanged"
+}
+
+reference(num, jay1, jay2)
+console.log(num, jay1.item, jay2.item);
