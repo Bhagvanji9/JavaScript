@@ -22,11 +22,21 @@
 #### Function hoisting
 
 #### Function scope
-
+#### Recursion
 ##### There are three ways for a function to refer to itself:
       * The function's name
       * arguments.callee
       * An in-scope variable that refers to the function
+      
+      const foo = function bar() {
+                     // statements go here
+                   };
+       Within the function body, the following are all equivalent:
+
+       * bar()
+       * arguments.callee()
+       * foo()
+            
       
       
 
