@@ -36,7 +36,12 @@
        * bar()
        * arguments.callee()
        * foo()
-            
-      
+           
+           
+#### This keyword
+     * alone this keyword refers to global object.
+     * In a regular function,this refers to the global object.
+     * In a method, this refers to the owner object.
+     * In function,in  strict mode this is undefined.
       
 
